@@ -46,7 +46,7 @@ router.post("/create-new-todo/:todo", (req, res) =>{
     res.json({todos});
 })
 
-router.get("/delete-todo-by-id/:id", (req, res) =>{
+router.delete("/delete-todo-by-id/:id", (req, res) =>{
     const foundId = todos.findIndex(item => item.id === req.params.id);
     if(foundId > -1){
         todos.splice(foundId, 1)
