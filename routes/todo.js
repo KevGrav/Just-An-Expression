@@ -50,7 +50,7 @@ router.delete("/delete-todo-by-id/:id", (req, res) =>{
     const foundId = todos.findIndex(item => item.id === req.params.id);
     if(foundId > -1){
         todos.splice(foundId, 1)
-        return res.json({message: "todo has been deleted."});
+        return res.json({message: "A todo has been deleted."});
     }else{
         res.json({message: "The Todo ID you are looking for does not exists, please check ID"})
     }
